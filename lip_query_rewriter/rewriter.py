@@ -317,24 +317,8 @@ class LipRewriter:
         
 
 if __name__ == '__main__':
-
-    # conn = PostgreConnector()
-    # plan = conn.get_plan()
-    # plan_tree = QueryPlan(plan)
-    # plan_tree.show_plan()
-
     import os
-    # queries_dir = '/mnt/pg_lip_bloom/queries/job_balsa_rand_test_0/take3_new//'
-    # queries_dir = '/mnt/pg_lip_bloom/queries/job_lip_rand_plan/rand_4/'
-    # queries_dir = '/mnt/pg_lip_bloom/queries/job_balsa_slow_test/take4_new/'
-    # queries_dir = '/mnt/pg_lip_bloom/queries/job_pg_lip_adaptive_join_no_index(TODO)/job_slow_no_idx/'
-    # queries_dir = '/mnt/pg_lip_bloom/queries/job_bao_rand_test_0/take2/'
-    queries_dir = '/mnt/pg_lip_bloom/queries/job_bao_slow_test/take1/'
-
     all_files = os.listdir(queries_dir)
-    # all_files = RAND_TEST_QUERIES[0]
-    # all_files = ['29b.sql', '28c.sql', '11b.sql']
-
     all_files = [s for s in all_files if '.sql' in s]
     os.system(f"mkdir {os.path.join(queries_dir, 'lip_auto_rewrite/')}")
     for sql_file in tqdm(all_files):
@@ -345,4 +329,3 @@ if __name__ == '__main__':
             rewriten = m_writer.rewrite(sql_str)
             print(rewriten)
             g.write(rewriten)
-        # break
