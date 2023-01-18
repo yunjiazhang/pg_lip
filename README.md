@@ -25,7 +25,7 @@ Specifically, 1) run ```make``` to compile; 2) run ```make install``` to copy th
 ## Usage example
 To use ```pg_lip```, we need to first rewrite the query with the extension functions provided, then the query can be directly run with the PostgreSQL. 
 
-<image src="docs/query_example.pdf"/>
+<embed src="docs/query_example.pdf" type="application/pdf">
 
 ### Auto query rewriting
 For JOB queries, we provide a auto query rewriting tool ```./lip_query_rewriter/rewriter.py```. The main function rewrites all the queries in ```all_files``` and output the rewriten queries to the subdir ```lip_auto_rewrite/```. Note that this rewriter needs to interact with PostgreSQL and only works on JOB queries. 
