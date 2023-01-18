@@ -23,7 +23,7 @@ We use Makefile to make the installation procedure fluent. The default PostgreSQ
 Specifically, 1) run ```make``` to compile; 2) run ```make install``` to copy the compiled files to PostgreSQL directory; 3) run ```make clean``` to clean the compiled files.
 
 ## Usage example
-To use ```pg_lip```, we need to first rewrite the query with the extension functions provided, then the query can be directly run with the PostgreSQL. 
+To use ```pg_lip```, we need to first rewrite the query with the extension functions provided, then the query can be directly run with the PostgreSQL. For a new PostgreSQL session, run ```CREATE EXTENSION pg_lip_bloom;``` to create the extension.
 
 ![Alt text](docs/query_example.jpg?raw=true "Query rewriting example")
 
