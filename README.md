@@ -1,5 +1,5 @@
 # pg_lip_bloom
-The LIP extension for PostgreSQL
+We implement the key bloom filter function of [LIP](https://www.vldb.org/pvldb/vol10/p889-zhu.pdf) in PostgreSQL as an extension pg_lip_bloom. LIP utilizes the semijoin techinique to optimize the equijoin execution pipeline. 
 
 ## Prepare PostgreSQL
 Clone the code base of the PostgreSQL
