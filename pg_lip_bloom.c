@@ -15,10 +15,12 @@
 #include <unistd.h>
 #include <sys/syscall.h>
 
+/* Some hyperparameters */
 int DYNAMIC = 2;
 int DYNMIAC_DETECT_FREQ = 1000;
 float MIN_ACTIVATE_PRUNE_RATE = 0.1;
 
+/* Define global variables */
 struct bloom* bl_ptrs[MAX_BLOOM_FILTERS] = { NULL };
 int bloom_disabled_flag[MAX_BLOOM_FILTERS] = { -1 };
 int bloom_cnters[MAX_BLOOM_FILTERS];
@@ -26,6 +28,7 @@ float bloom_prune_rates[MAX_BLOOM_FILTERS] = { -1 };
 int n_bloom_used = 0;
 int shared_mem_location = 0;
 
+/* For postgres */
 PG_MODULE_MAGIC;
 
 /*******************************************************************
