@@ -29,3 +29,18 @@ To use ```pg_lip```, we need to first rewrite the query with the extension funct
 
 ### Auto query rewriting
 For JOB queries, we provide a auto query rewriting tool ```./lip_query_rewriter/rewriter.py```. The main function rewrites all the queries in ```all_files``` and output the rewriten queries to the subdir ```lip_auto_rewrite/```. Note that this rewriter needs to interact with PostgreSQL and only works on JOB queries. 
+
+## License and Acknowledgements
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this repo except in compliance with the License.
+You may obtain a copy of the License at:
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+This work was supported by Amazon under an ARA Award, by NSF under grant IIS-1755676, and by DARPA under grant ASKE HR00111990013.
